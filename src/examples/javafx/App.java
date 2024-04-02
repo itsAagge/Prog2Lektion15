@@ -1,4 +1,4 @@
-package examples;
+package examples.javafx;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
