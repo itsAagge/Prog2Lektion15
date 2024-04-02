@@ -12,7 +12,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Button button = new Button("Click me");
-        button.setOnAction();
+        button.setOnAction(e -> System.out.println("Event handled"));
         Pane pane = new GridPane();
         pane.getChildren().add(button);
         Scene scene = new Scene(pane, 400, 250);
