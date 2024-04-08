@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class PeopleArray {
-    private List<Person> people = new ArrayList<>();
+public class PeopleArray<T> {
+    private List<T> people = new ArrayList<>();
 
-    public void addPerson(Person person) {
-        people.add(person);
+    public void addPerson(T t) {
+        people.add(t);
     }
 
     public void printPeople() {
@@ -43,20 +43,20 @@ public class PeopleArray {
      */
 
     //Med Javas Predicate<T>
-    public Person findFirst(Predicate<Person> filter) {
-        for (Person person : people) {
-            if (filter.test(person)) {
-                return person;
+    public T findFirst(Predicate<T> filter) {
+        for (T t : people) {
+            if (filter.test(t)) {
+                return t;
             }
         }
         return null;
     }
 
-    public List<Person> findAll(Predicate<Person> filter) {
-        List<Person> foundPeople = new ArrayList<>();
-        for (Person person : people) {
-            if (filter.test(person)) {
-                foundPeople.add(person);
+    public List<T> findAll(Predicate<T> filter) {
+        List<T> foundPeople = new ArrayList<>();
+        for (T t : people) {
+            if (filter.test(t)) {
+                foundPeople.add(t);
             }
         }
         return foundPeople;
